@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>🎵 AI Voice to Music Converter</h1>
+        <h1>AI Voice to Music Converter</h1>
         <p>Transform your voice into beautiful music</p>
       </header>
       <main>

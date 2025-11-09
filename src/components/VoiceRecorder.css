@@ -3,6 +3,9 @@
   margin: 0 auto;
   padding: 20px;
   font-family: 'Arial', sans-serif;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .recorder-controls {
@@ -17,25 +20,30 @@
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-weight: bold;
 }
 
 .record-btn {
   background: #ff4757;
   color: white;
+  box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
 }
 
 .record-btn:hover {
   background: #ff3742;
   transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 71, 87, 0.4);
 }
 
 .stop-btn {
   background: #747d8c;
   color: white;
+  box-shadow: 0 4px 15px rgba(116, 125, 140, 0.3);
 }
 
 .stop-btn:hover {
   background: #636e72;
+  transform: scale(1.05);
 }
 
 .recording-indicator {
@@ -43,6 +51,10 @@
   color: #ff4757;
   font-weight: bold;
   margin: 20px 0;
+  padding: 15px;
+  background: rgba(255, 71, 87, 0.1);
+  border-radius: 10px;
+  border: 2px solid #ff4757;
 }
 
 .pulse {
@@ -62,28 +74,25 @@
 
 .audio-preview {
   margin: 30px 0;
-  padding: 20px;
+  padding: 25px;
   background: #f8f9fa;
-  border-radius: 10px;
+  border-radius: 15px;
   text-align: center;
+  border: 2px solid #e9ecef;
 }
 
 .audio-preview h3 {
   margin-bottom: 15px;
   color: #2d3436;
-}
-
-.audio-preview audio {
-  width: 100%;
-  margin: 15px 0;
+  font-size: 1.5em;
 }
 
 .action-buttons {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin: 25px 0;
 }
 
 .convert-btn {
@@ -93,30 +102,100 @@
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  flex: 1;
+  min-width: 160px;
 }
 
 .convert-btn:hover {
   background: #0770c4;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(9, 132, 227, 0.3);
+}
+
+.download-section {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #dee2e6;
+}
+
+.download-btn {
+  padding: 12px 25px;
+  background: #00b894;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.download-btn:hover {
+  background: #00a085;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 184, 148, 0.3);
 }
 
 .instructions {
   margin-top: 30px;
-  padding: 20px;
+  padding: 25px;
   background: #e8f4fd;
-  border-radius: 10px;
+  border-radius: 15px;
+  border-left: 5px solid #0984e3;
 }
 
 .instructions h4 {
   color: #2d3436;
   margin-bottom: 15px;
+  font-size: 1.3em;
 }
 
 .instructions ol {
   text-align: left;
   line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 .instructions li {
+  margin-bottom: 10px;
+  padding-left: 5px;
+}
+
+.tips {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.tips h5 {
+  color: #2d3436;
+  margin-bottom: 10px;
+}
+
+.tips ul {
+  text-align: left;
+  line-height: 1.5;
+}
+
+.tips li {
   margin-bottom: 8px;
+  color: #555;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .voice-recorder {
+    margin: 10px;
+    padding: 15px;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+  }
+  
+  .convert-btn {
+    min-width: auto;
+  }
 }
